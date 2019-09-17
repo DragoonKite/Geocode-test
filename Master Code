@@ -1,0 +1,12 @@
+import requests
+
+address = input("Enter Address: ")
+base_url='https://geocode.xyz/)'
+url = base_url + address + "?json=1"
+response = requests.get(url)
+
+
+lattitude = response.json()['latt']
+longitude = response.json()['longt']
+
+print(lattitude,longitude)
